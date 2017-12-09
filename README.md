@@ -1,1 +1,1 @@
-# Coursera Getting and cleaning data - Programming Assignment
+### Coursera Getting and cleaning data - Programming Assignment
