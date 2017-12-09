@@ -18,11 +18,11 @@ createSet <- function(dataSet, labelSet, subjectSet, activityNames, wantedFeatur
 }
 
 ## Read activities
-activityLabels <- read.table("./UDI HAR Dataset/activity_labels.txt")
+activityLabels <- read.table("./UCI HAR Dataset/activity_labels.txt")
 colnames(activityLabels) <- c("activityID", "activityName")
 
 ## Read features for the training and test set
-features <- read.table("./UDI HAR Dataset/features.txt")
+features <- read.table("./UCI HAR Dataset/features.txt")
 ## Find all features with mean or std
 wantedFeatures <- grep("(mean\\(\\)|std\\(\\))", features[,2], value=FALSE)
 ## Tidy featurenames
@@ -44,18 +44,18 @@ features <- data.frame(features)
 colnames(features) <- c("ID", "Description")
 
 ## Reading all trainig-datafiles
-trainSet      <- read.table("./UDI HAR Dataset/train/X_train.txt")
-trainLabels   <- read.table("./UDI HAR Dataset/train/y_train.txt")
-trainSubjects <- read.table("./UDI HAR Dataset/train/subject_train.txt")
+trainSet      <- read.table("./UCI HAR Dataset/train/X_train.txt")
+trainLabels   <- read.table("./UCI HAR Dataset/train/y_train.txt")
+trainSubjects <- read.table("./UCI HAR Dataset/train/subject_train.txt")
 
 ## Create merged trainingset
 trainSet <- createSet(trainSet, trainLabels, trainSubjects, activityLabels, wantedFeatures, features)
 
 
 ## Reading all test-datafiles
-testSet      <- read.table("./UDI HAR Dataset/test/X_test.txt")
-testLabels   <- read.table("./UDI HAR Dataset/test/y_test.txt")
-testSubjects <- read.table("./UDI HAR Dataset/test/subject_test.txt")
+testSet      <- read.table("./UCI HAR Dataset/test/X_test.txt")
+testLabels   <- read.table("./UCI HAR Dataset/test/y_test.txt")
+testSubjects <- read.table("./UCI HAR Dataset/test/subject_test.txt")
 ## Create merged trainingset
 testSet <- createSet(testSet, testLabels, testSubjects, activityLabels, wantedFeatures, features)
 
@@ -66,4 +66,4 @@ totalSet <- bind_rows(trainSet, testSet)
 meanSet <- totalSet %>% group_by(subjectID, activityName) %>% dplyr::summarise_all(funs(mean))
 
 ## Write table to "tidy_data.txt"
-write.table(meanSet, "./UDI HAR Dataset/tidy_data.txt")
+write.table(meanSet, "./UCI HAR Dataset/tidy_data.txt")
