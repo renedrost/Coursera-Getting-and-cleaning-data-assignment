@@ -3,16 +3,22 @@ library(dplyr)
 createSet <- function(dataSet, labelSet, subjectSet, activityNames, wantedFeatures, featureSet) {
     ## Remove unwanted columns
     dataSet <- dataSet[, wantedFeatures]
+    
     ## Set columnnames in dataset
     colnames(dataSet) <- featureSet$Description[wantedFeatures]
+    
     ## Set columnname of labelset
     colnames(labelSet) <- c("activityID")
+    
     ## Set columnname of subjectset
     colnames(subjectSet) <- c("subjectID")
+    
     ## Retrieve activitynames for the labelset
     labelSet <- inner_join(labelSet, activityNames, by = "activityID")
+    
     ## Add column with activitynames to dataset
     dataSet <- cbind(activityName = labelSet$activityName, dataSet)
+    
     ## Add cojumn with id's of the subjects
     dataSet <- cbind(subjectID = subjectSet$subjectID, dataSet)
 }
@@ -23,8 +29,10 @@ colnames(activityLabels) <- c("activityID", "activityName")
 
 ## Read features for the training and test set
 features <- read.table("./UCI HAR Dataset/features.txt")
+
 ## Find all features with mean or std
 wantedFeatures <- grep("(mean\\(\\)|std\\(\\))", features[,2], value=FALSE)
+
 ## Tidy featurenames
 ## - remove ()
 ## - remove - and uppercase next character
@@ -38,8 +46,10 @@ features <- lapply(features, gsub, pattern="\\-Y", replacement="Y")
 features <- lapply(features, gsub, pattern="\\-Z", replacement="Z")
 features <- lapply(features, gsub, pattern="^t", replacement="time")
 features <- lapply(features, gsub, pattern="^f", replacement="frequency")
+
 ## Convert to a data.frame
 features <- data.frame(features)
+
 ## Add colnames to the features data.frame
 colnames(features) <- c("ID", "Description")
 
