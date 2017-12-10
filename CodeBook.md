@@ -48,7 +48,79 @@ The following steps were taken to transform the data into tidy data:
 
 ### Result
 For computing the mean the following steps were taken:
+
 - group by subject and activity
 - compute mean for each subject/activity pair
 
 At the end the resulting set was written to the file *tidy_data.txt*.
+
+The resulting data set consists of the following variables:
+
+- subjectID 
+- activityName 
+- timeBodyAccMeanX 
+- timeBodyAccMeanY 
+- timeBodyAccMeanZ 
+- timeBodyAccStdX 
+- timeBodyAccStdY 
+- timeBodyAccStdZ 
+- timeGravityAccMeanX 
+- timeGravityAccMeanY 
+- timeGravityAccMeanZ 
+- timeGravityAccStdX 
+- timeGravityAccStdY 
+- timeGravityAccStdZ
+- timeBodyAccJerkMeanX 
+- timeBodyAccJerkMeanY
+- timeBodyAccJerkMeanZ
+- timeBodyAccJerkStdX
+- timeBodyAccJerkStdY
+- timeBodyAccJerkStdZ
+- timeBodyGyroMeanX
+- timeBodyGyroMeanY
+- timeBodyGyroMeanZ
+- timeBodyGyroStdX
+- timeBodyGyroStdY
+- timeBodyGyroStdZ
+- timeBodyGyroJerkMeanX
+- timeBodyGyroJerkMeanY
+- timeBodyGyroJerkMeanZ
+- timeBodyGyroJerkStdX
+- timeBodyGyroJerkStdY
+- timeBodyGyroJerkStdZ
+- timeBodyAccMagMean
+- timeBodyAccMagStd
+- timeGravityAccMagMean
+- timeGravityAccMagStd
+- timeBodyAccJerkMagMean
+- timeBodyAccJerkMagStd
+- timeBodyGyroMagMean
+- timeBodyGyroMagStd
+- timeBodyGyroJerkMagMean
+- timeBodyGyroJerkMagStd
+- frequencyBodyAccMeanX
+- frequencyBodyAccMeanY
+- frequencyBodyAccMeanZ
+- frequencyBodyAccStdX
+- frequencyBodyAccStdY
+- frequencyBodyAccStdZ
+- frequencyBodyAccJerkMeanX
+- frequencyBodyAccJerkMeanY
+- frequencyBodyAccJerkMeanZ
+- frequencyBodyAccJerkStdX
+- frequencyBodyAccJerkStdY
+- frequencyBodyAccJerkStdZ
+- frequencyBodyGyroMeanX
+- frequencyBodyGyroMeanY
+- frequencyBodyGyroMeanZ
+- frequencyBodyGyroStdX
+- frequencyBodyGyroStdY
+- frequencyBodyGyroStdZ
+- frequencyBodyAccMagMean
+- frequencyBodyAccMagStd
+- frequencyBodyBodyAccJerkMagMean
+- frequencyBodyBodyAccJerkMagStd
+- frequencyBodyBodyGyroMagMean
+- frequencyBodyBodyGyroMagStd
+- frequencyBodyBodyGyroJerkMagMean
+- frequencyBodyBodyGyroJerkMagStd
