@@ -66,4 +66,4 @@ totalSet <- bind_rows(trainSet, testSet)
 meanSet <- totalSet %>% group_by(subjectID, activityName) %>% dplyr::summarise_all(funs(mean))
 
 ## Write table to "tidy_data.txt"
-write.table(meanSet, "./UCI HAR Dataset/tidy_data.txt")
+write.table(meanSet, "./tidy_data.txt")
