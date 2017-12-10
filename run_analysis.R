@@ -16,11 +16,8 @@ createSet <- function(dataSet, labelSet, subjectSet, activityNames, wantedFeatur
     ## Retrieve activitynames for the labelset
     labelSet <- inner_join(labelSet, activityNames, by = "activityID")
     
-    ## Add column with activitynames to dataset
-    dataSet <- cbind(activityName = labelSet$activityName, dataSet)
-    
-    ## Add cojumn with id's of the subjects
-    dataSet <- cbind(subjectID = subjectSet$subjectID, dataSet)
+    ## Add column with subjectID and column with activitynames to dataset
+    dataSet <- cbind(subjectID = subjectSet$subjectID, activityName = labelSet$activityName, dataSet)
 }
 
 ## Read activities
