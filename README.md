@@ -6,7 +6,7 @@ This respostory has been created for the Coursera Getting and cleaning data week
 For running the R-script properly you should copy both the script *run_analysis.R* and the directory *UCI HAR Dataset* into your working directory.
 
 ### Input dataset
-In the directory UCI HAR Dataset is the complete dataset available. This assignment only uses the following files:
+In the directory *UCI HAR Dataset* is the complete dataset available. This assignment only uses the following files:
 
 + activity_labels.txt
 + features_info.txt
