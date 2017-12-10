@@ -35,15 +35,15 @@ The following steps were taken to transform the data into tidy data:
 - Read trainingset (*X_train.txt*, *y_train.txt* and *subject_train.txt*) and perform the following transformations:
     - Remove unwanted columns from the training data.
     - Add colnames (the features read before) to the training data.
-    - Add colnames to the label data and subject data.
-    - Convert label data to label names.
-    - Add columns with label names and subject IDs to the training data.
+    - Add colnames to the activity data and subject data.
+    - Convert activity data to activity names.
+    - Add columns with activity names and subject IDs to the training data.
 - Read testset (*X_test.txt*, *y_test.txt* and *subject_test.txt*) and perform the following transformations:
     - Remove unwanted columns from the training data.
-    - Add colnames (the features read before) to the training data.
-    - Add colnames to the label data and subject data.
-    - Convert label data to label names.
-    - Add columns with label names and subject IDs to the training data.
+    - Add colnames (the features read before) to the test data.
+    - Add colnames to the activity data and subject data.
+    - Convert activity data to activity names.
+    - Add columns with activity names and subject IDs to the test data.
 - Combine the rows of the training and test sets.
 
 ### Result
