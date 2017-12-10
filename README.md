@@ -28,5 +28,5 @@ In general the script is performing the following steps:
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 ### Output
-After running the script the file *tidy_data.txt* has been created in the directory *UCI HAR Dataset*.
+After running the script the file *tidy_data.txt* has been created in the working directory.
 This file contains the means for all features for each pair subject/activity.
