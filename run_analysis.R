@@ -56,7 +56,7 @@ trainSet <- createSet(trainSet, trainLabels, trainSubjects, activityLabels, want
 testSet      <- read.table("./UCI HAR Dataset/test/X_test.txt")
 testLabels   <- read.table("./UCI HAR Dataset/test/y_test.txt")
 testSubjects <- read.table("./UCI HAR Dataset/test/subject_test.txt")
-## Create merged trainingset
+## Create merged test set
 testSet <- createSet(testSet, testLabels, testSubjects, activityLabels, wantedFeatures, features)
 
 ## Merge training and test sets
